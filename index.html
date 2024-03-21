@@ -92,36 +92,25 @@
         (производит высокое напряжение высокой частоты).
       </p>
 
-      <video id="myVideo" width="100%" autoplay="autoplay" controls src="video.mp4"></video>
+      <video id="myVideo" width="100%" controls autoplay muted src="video.mp4"></video>
 
       <script>
         // Get the video element
         var video = document.getElementById("myVideo");
-        
-        // Function to check if scroll position is not zero
-        function shouldPlayVideo() {
-          return (window.pageYOffset !== 0);
-        }
-        
+        video.play();
         // Play the video when the user interacts with the phone screen
         document.addEventListener("touchstart", function() {
-          if (shouldPlayVideo()) {
-            video.play();
-          }
+          video.play();
         });
         
         // Play the video when the user starts scrolling the browser window
         document.addEventListener("scroll", function() {
-          if (shouldPlayVideo()) {
-            video.play();
-          }
+          video.play();
         });
         
         // Play the video when the user clicks anywhere on the window
         document.addEventListener("click", function() {
-          if (shouldPlayVideo()) {
-            video.play();
-          }
+          video.play();
         });
         </script>
 
